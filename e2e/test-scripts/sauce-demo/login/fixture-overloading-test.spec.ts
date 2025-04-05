@@ -1,5 +1,4 @@
-
-import { test } from "../../../fixtures/sauceDemo.fixture";
+import { test } from "../../../fixtures/testFixtureOverloading.fixture";
 
 test.describe("Fixture overloading Test", () => {
     test("user flow fixture overloading test", async ({ userFlow }) => {

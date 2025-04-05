@@ -1,13 +1,12 @@
 {
   "name": "ls",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright Typescript Framework - Starterkit",
   "license": "ISC",
-  "author": "",
+  "author": "Brijendra Singh",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test-new": "playwright test --browser=chromium --headed --reporter=html --screenshot=only-on-failure --video=retain-on-failure",
     "test": "playwright test --browser=chromium --headed --reporter=html"
   },
   "dependencies": {
