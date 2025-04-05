@@ -7,7 +7,8 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test-new": "playwright test --browser=chromium --headed --reporter=html --screenshot=only-on-failure --video=retain-on-failure",
+    "test": "playwright test --browser=chromium --headed --reporter=html"
   },
   "dependencies": {
     "@playwright/test": "^1.51.1"

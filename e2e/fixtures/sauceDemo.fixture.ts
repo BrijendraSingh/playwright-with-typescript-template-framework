@@ -1,16 +1,22 @@
 import {test as base} from "@playwright/test";
-import { SauceDemoBaseFlow } from "../test-scripts/sauce-demo/SauceDemoBase.flow";
+import { UserFlow } from "../test-flows/sauce-demo/User.flow";
+import { AdminFlow } from "../test-flows/sauce-demo/Admin.flow";
 
 export const test = base.extend<{
-    sauceDemoBaseFlow: SauceDemoBaseFlow;
+    userFlow: UserFlow;
+    adminFlow: AdminFlow;
 }>  ({
-    sauceDemoBaseFlow: async ({}, use) => { 
-        const baseUrl = "https://www.saucedemo.com/";
-        console.log("Step 0: Inside sauceDemoBaseFlow fixture...");
-        const flow = new SauceDemoBaseFlow(baseUrl);
-        await flow.initialize();
-        await use(flow);
-        await flow.close();
+    userFlow: async ({}, use) => { 
+        const user = new UserFlow();
+        await user.initialize();
+        await use(user);
+        await user.close();
+    },
+    adminFlow: async ({}, use) => { 
+        const admin = new AdminFlow();
+        await admin.initialize();
+        await use(admin);
+        await admin.close();
     }
 });
 export { expect } from "@playwright/test";

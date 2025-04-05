@@ -22,7 +22,7 @@ export default defineConfig({
   // Shared settings for all projects
   use: {
     // Base URL to use in actions like `await page.goto('/')`
-    baseURL: 'https://www.saucedemo.com/',
+    // baseURL: 'https://www.saucedemo.com/',
 
     // Collect trace when retrying the failed test
     trace: 'on-first-retry',
@@ -35,11 +35,11 @@ export default defineConfig({
   },
 
   // Configure projects for major browsers
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    }
+  // projects: [
+  //   {
+  //     name: 'chromium',
+  //     use: { ...devices['Desktop Chrome'] },
+  //   }
     //,
 
     // {
@@ -71,7 +71,7 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
+  // ],
 
   // Folder for test artifacts (screenshots, videos, traces)
   outputDir: 'test-results/',

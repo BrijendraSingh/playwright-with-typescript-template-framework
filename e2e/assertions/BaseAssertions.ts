@@ -1,3 +1,5 @@
+import { expect } from "@playwright/test";
+
 export class BaseAssertions {
     constructor(public page: any) {
         this.page = page;
@@ -10,6 +12,7 @@ export class BaseAssertions {
         }
         else {
             console.error(`❌ ${errorMessage}`);
+            expect(successMessage).toBeFalsy();
         }
         return result;
     }

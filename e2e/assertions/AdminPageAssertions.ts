@@ -1,19 +1,19 @@
 import { BaseAssertions } from "./BaseAssertions";
 
-export class LoginPageAssertions extends BaseAssertions {
+export class AdminPageAssertions extends BaseAssertions {
     constructor(public page: any) {
         super(page);
     }
 
-    async verifyLoginPage(): Promise<void> {
+    async verifyAdminPage(): Promise<void> {
         await this.verify(
             async () => await this.page.isVisible('.login_logo'),
-            'Login page is displayed',
-            'Login page is not displayed'
+            'Admin page is displayed',
+            'Admin page is not displayed'
         );
     }
 
-    async verifyErrorMessage(): Promise<void> {
+    async verifyAdminErrorMessage(): Promise<void> {
         await this.verify(
             async () => await this.page.isVisible('[data-test="error"]'),
             'Error message is displayed',
