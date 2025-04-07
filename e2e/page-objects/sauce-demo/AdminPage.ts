@@ -1,9 +1,9 @@
-import { Page } from "@playwright/test";
-import { loginPageLocators } from "../../locators/sauce-demo/sauce-demo.locator";
+import { Page } from '@playwright/test';
+import { loginPageLocators } from '../../locators/sauce-demo/sauce-demo.locator';
 
 export class AdminPage {
     readonly page: Page;
-    
+
     constructor(page: Page) {
         this.page = page;
     }

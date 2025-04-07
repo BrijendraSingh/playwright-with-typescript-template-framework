@@ -1,18 +1,29 @@
 {
-  "name": "ls",
-  "version": "1.0.0",
-  "description": "Playwright Typescript Framework - Starterkit",
-  "license": "ISC",
-  "author": "Brijendra Singh",
-  "type": "commonjs",
-  "main": "",
-  "scripts": {
-    "test": "playwright test --browser=chromium --headed --reporter=html"
-  },
-  "dependencies": {
-    "@playwright/test": "^1.51.1"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0"
-  }
+    "name": "ls",
+    "version": "1.0.0",
+    "description": "Playwright Typescript Framework - Starterkit",
+    "license": "ISC",
+    "author": "Brijendra Singh",
+    "type": "commonjs",
+    "main": "",
+    "scripts": {
+        "test": "playwright test --browser=chromium --headed --reporter=html",
+        "prettier": "prettier --write .",
+        "lint": "eslint . --ext .ts",
+        "lint:fix": "eslint . --ext .ts --fix"
+    },
+    "dependencies": {
+        "@playwright/test": "^1.51.1"
+    },
+    "devDependencies": {
+        "@types/node": "^22.14.0",
+        "@typescript-eslint/eslint-plugin": "^8.29.0",
+        "@typescript-eslint/parser": "^8.29.0",
+        "eslint": "^9.24.0",
+        "eslint-config-prettier": "^10.1.1",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-prettier": "^5.2.6",
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.3"
+    }
 }

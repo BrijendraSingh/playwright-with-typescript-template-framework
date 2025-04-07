@@ -1,6 +1,6 @@
-import { AdminPageAssertions } from "../../assertions/AdminPageAssertions";
-import { AdminPage } from "../../page-objects/sauce-demo/AdminPage";
-import { BaseFlow } from "./Base.flow";
+import { AdminPageAssertions } from '../../assertions/AdminPageAssertions';
+import { AdminPage } from '../../page-objects/sauce-demo/AdminPage';
+import { BaseFlow } from './Base.flow';
 
 export class AdminFlow extends BaseFlow {
     private adminPage!: AdminPage;
@@ -8,7 +8,7 @@ export class AdminFlow extends BaseFlow {
     private testChain: (() => Promise<void>)[] = [];
 
     constructor() {
-        super("https://www.saucedemo.com/");
+        super('https://www.saucedemo.com/');
     }
 
     async initialize() {
@@ -17,7 +17,7 @@ export class AdminFlow extends BaseFlow {
         this.adminPageAssertions = new AdminPageAssertions(this.page);
     }
 
-    async execute(): Promise<void> {      
+    async execute(): Promise<void> {
         for (const testAction of this.testChain) {
             await testAction();
         }
@@ -25,7 +25,7 @@ export class AdminFlow extends BaseFlow {
 
     adminLogin(): AdminFlow {
         this.testChain.push(async () => {
-            await this.adminPage.adminLogin("username", "password");
+            await this.adminPage.adminLogin('username', 'password');
             await this.adminPageAssertions.verifyAdminErrorMessage();
         });
         return this;
@@ -33,14 +33,14 @@ export class AdminFlow extends BaseFlow {
 
     adminCart(): AdminFlow {
         this.testChain.push(async () => {
-            console.log("Admin cart...");
+            console.log('Admin cart...');
         });
-        return this
+        return this;
     }
 
     adminCheckout(): AdminFlow {
-        this.testChain.push(async () => {   
-            console.log("admin checkout...");
+        this.testChain.push(async () => {
+            console.log('admin checkout...');
         });
         return this;
     }

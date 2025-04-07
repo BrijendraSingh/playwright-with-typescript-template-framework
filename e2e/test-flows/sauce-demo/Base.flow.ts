@@ -1,4 +1,4 @@
-import { Browser, chromium, Page } from "@playwright/test";
+import { Browser, chromium, Page } from '@playwright/test';
 
 export class BaseFlow {
     public page!: Page;

@@ -91,10 +91,7 @@ export const environments: Record<ENVIRONMENTS, EnvironmentConfig> = {
         },
     },
 };
-export function getEnvironmentConfig(env?: string): EnvironmentConfig  {
+export function getEnvironmentConfig(env?: string): EnvironmentConfig {
     const environment = (env || process.env.TEST_ENV || 'dev') as ENVIRONMENTS;
     return environments[environment] || environments.staging;
 }
-
-
-

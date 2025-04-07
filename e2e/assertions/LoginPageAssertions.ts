@@ -1,4 +1,4 @@
-import { BaseAssertions } from "./BaseAssertions";
+import { BaseAssertions } from './BaseAssertions';
 
 export class LoginPageAssertions extends BaseAssertions {
     constructor(public page: any) {

@@ -1,10 +1,10 @@
 export const loginPageLocators = {
-  username: '[data-test="username"]',
-  password: '[data-test="password"]',
-  loginButton: '[data-test="login-button"]',
-  errorMessage: '[data-test="error"]',
-  errorMessageText: 'h3[data-test="error"]',
-}
+    username: '[data-test="username"]',
+    password: '[data-test="password"]',
+    loginButton: '[data-test="login-button"]',
+    errorMessage: '[data-test="error"]',
+    errorMessageText: 'h3[data-test="error"]',
+};
 
 export const homePageLocators = {
   addToCartButton: {
@@ -27,4 +27,5 @@ export const homePageLocators = {
     css: '.shopping_cart_link',
     xpath: '//*[@class="shopping_cart_link"]'
   }     
-}
+};
+
