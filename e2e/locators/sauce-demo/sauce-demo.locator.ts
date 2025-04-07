@@ -7,6 +7,24 @@ export const loginPageLocators = {
 }
 
 export const homePageLocators = {
-  addToCartButton: '.btn_primary.btn_inventory',
-  cartButton: '.shopping_cart_link',        
+  addToCartButton: {
+    testId: 'add-to-cart-sauce-labs-backpack',
+    role: 'button',
+    name: 'Add to cart',
+    label: 'Add to cart',
+    placeholder: 'Add to cart',
+    altText: 'Add to cart',
+    css: '.btn_primary.btn_inventory',
+    xpath: '//*[@data-test="add-to-cart-sauce-labs-backpack"]',
+  },
+  cartButton: {
+    testId: 'shopping_cart_container',
+    role: 'button',
+    name: 'Shopping cart',
+    label: 'Shopping cart',
+    placeholder: 'Shopping cart',
+    altText: 'Shopping cart',
+    css: '.shopping_cart_link',
+    xpath: '//*[@class="shopping_cart_link"]'
+  }     
 }
